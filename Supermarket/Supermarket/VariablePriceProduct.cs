@@ -6,7 +6,6 @@
         public float Quantity { get; set; }
         public override decimal ValueToPay()
         {
-            //return Price * (decimal)Quantity * (decimal)Tax + (Price * (decimal)Quantity);
             return Price * (decimal)Quantity + (Price * (decimal)Quantity * (decimal)Tax);
         }
         public override string ToString()
