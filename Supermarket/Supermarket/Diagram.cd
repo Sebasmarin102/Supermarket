@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Supermarket.Product">
-    <Position X="2" Y="0.5" Width="1.5" />
+    <Position X="3" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAQAgAAAEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Product.cs</FileName>
@@ -9,18 +9,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Supermarket.FixedPriceProduct">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FixedPriceProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Supermarket.VariablePriceProduct">
-    <Position X="4.5" Y="2" Width="1.5" />
+    <Position X="5.5" Y="2.5" Width="1.5" />
     <InheritanceLine Type="Supermarket.Product" ManuallyRouted="true" FixedFromPoint="true">
       <Path>
-        <Point X="3.5" Y="2.375" />
-        <Point X="4.5" Y="2.375" />
+        <Point X="4.5" Y="2.625" />
+        <Point X="5.5" Y="2.625" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -29,19 +29,26 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Supermarket.ComposedProduct">
-    <Position X="2" Y="3.5" Width="1.5" />
+    <Position X="3" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEABAACAAAAAAAAAAAAgAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAgAAAAAAAAQ=</HashCode>
       <FileName>ComposedProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Supermarket.Invoice">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAASAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Invoice.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Interface Name="Supermarket.IPay">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPay.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
