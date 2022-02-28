@@ -4,27 +4,27 @@ namespace Supermarket
 {
     public class ComposedProduct : Product
     {
-        string _ProductNames;
         public float Discount { get; set; }
         public ICollection Products { get; set; }
         public override decimal ValueToPay()
         {
-            decimal _payroll = 0;
+            decimal payroll = 0;
             foreach (Product product in Products)
             {
-                _payroll += product.ValueToPay();
+                payroll += product.ValueToPay();
             }
-            return _payroll - (_payroll * (decimal)Discount);
+            return payroll - (payroll * (decimal)Discount);
         }
         public override string ToString()
         {
+            var ProductNames = string.Empty;
             foreach (Product product in Products)
             {
-                _ProductNames += $"{ product.Description}, ";
+                ProductNames += $"{product.Description}, ";
             }
 
             return $"{base.ToString()} " +
-                $"\n\tProducts...: {$"{_ProductNames}",15}" +
+                $"\n\tProducts...: {$"{ProductNames}",15}" +
                 $"\n\tDiscount...: {$"{Discount:P2}",15}" +
                 $"\n\tValue......: {$"{ValueToPay():C2}",15}";
         }

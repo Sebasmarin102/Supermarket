@@ -1,26 +1,37 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Supermarket
 {
     public class Invoice : IPay
     {
-        private string _product;
-        public Invoice(string product)
-        {
-            _product = product;
-        }
+        private List<Product> _products = new List<Product>();
+        public Invoice() { }
         public override string ToString()
         {
-            return base.ToString();
+            foreach (Product product in _products)
+            {
+                Console.WriteLine(product.ToString());
+            }
+
+            return "                    ================" +
+                $"\nTOTAL: {$"{ValueToPay():C2}",29}";
         }
 
         public decimal ValueToPay()
         {
-            throw new NotImplementedException();
+            decimal payroll = 0;
+            foreach (Product product in _products)
+            {
+                payroll += product.ValueToPay();
+            }
+            return payroll;
+        }
+
+        public void AddProduct(Product product)
+        {
+            _products.Add(product);
         }
     }
 }

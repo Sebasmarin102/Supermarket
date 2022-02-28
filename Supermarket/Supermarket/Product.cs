@@ -9,7 +9,7 @@
         public abstract decimal ValueToPay();
         public override string ToString()
         {
-            return $"{Id} -  {Description}";
+            return $"  {Id}  {Description}";
         }
     }
 }
