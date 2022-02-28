@@ -7,17 +7,10 @@ namespace Supermarket
     {
         private List<Product> _products = new List<Product>();
         public Invoice() { }
-        public override string ToString()
+        public void AddProduct(Product product)
         {
-            foreach (Product product in _products)
-            {
-                Console.WriteLine(product.ToString());
-            }
-
-            return "                    ================" +
-                $"\nTOTAL: {$"{ValueToPay():C2}",29}";
+            _products.Add(product);
         }
-
         public decimal ValueToPay()
         {
             decimal payroll = 0;
@@ -27,10 +20,15 @@ namespace Supermarket
             }
             return payroll;
         }
-
-        public void AddProduct(Product product)
+        public override string ToString()
         {
-            _products.Add(product);
+            foreach (Product product in _products)
+            {
+                Console.WriteLine(product.ToString());
+            }
+
+            return "                    ================" +
+                $"\nTOTAL: {$"{ValueToPay():C2}",29}";
         }
     }
 }
