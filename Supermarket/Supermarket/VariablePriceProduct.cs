@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Supermarket
+﻿namespace Supermarket
 {
     public class VariablePriceProduct : Product
     {
@@ -17,8 +11,10 @@ namespace Supermarket
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tMeasurement: {$"{Measurement}",15}" +
+                $"\n\tMeasurement: {$"{Measurement}",5}" +
                 $"\n\tQuantity...: {$"{Quantity:N2}",15}" +
+                $"\n\tPrice......: {$"{Price:C2}",15}" +
+                $"\n\tTax:.......: {$"{Tax:P2}",15}" +
                 $"\n\tValue:.....: {$"{ValueToPay():C2}",15}";
         }
     }
