@@ -13,12 +13,12 @@ namespace Supermarket
         }
         public decimal ValueToPay()
         {
-            decimal payroll = 0;
+            decimal accumulated = 0;
             foreach (Product product in _products)
             {
-                payroll += product.ValueToPay();
+                accumulated += product.ValueToPay();
             }
-            return payroll;
+            return accumulated;
         }
         public override string ToString()
         {
