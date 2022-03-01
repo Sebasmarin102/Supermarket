@@ -8,12 +8,12 @@ namespace Supermarket
         public ICollection Products { get; set; }
         public override decimal ValueToPay()
         {
-            decimal payroll = 0;
+            decimal accumulated = 0;
             foreach (Product product in Products)
             {
-                payroll += product.ValueToPay();
+                accumulated += product.ValueToPay();
             }
-            return payroll - (payroll * (decimal)Discount);
+            return accumulated - (accumulated * (decimal)Discount);
         }
         public override string ToString()
         {
